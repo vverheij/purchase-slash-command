@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 // require('./routes/action')(app);
 
 app.post('/purchase', async (req, res) => {
-  console.log(req)
+  console.log(req.body)
   const { text, user_id } = req.body;
   res.json({
     text: `Thanks for your purchase request of *${text}*. We will message the CEO now for authorisation.`
